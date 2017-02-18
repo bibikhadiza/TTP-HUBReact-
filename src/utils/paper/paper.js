@@ -1,18 +1,15 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
+// import Paper from 'material-ui/Paper';
+import CardExampleExpandable from '../card/card.js'
 
-const style = {
-  margin: "auto",
-  width: "50%",
-  height: "auto",
-  padding: "10px",
-  overflow: "scroll",
-};
+
+
 
 const PaperExampleSimple = (props) => (
   <div>
-    <Paper style={style} zDepth={2} />
+    <CardExampleExpandable/>
   </div>
+
 );
 
 export default PaperExampleSimple;

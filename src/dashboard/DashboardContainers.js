@@ -1,8 +1,12 @@
 import React from 'react'
 import data from './data'
 import MenuExampleSimple from './menu'
-import PaperExampleSimple from '../utils/paper/paper.js'
-import RaisedButtonExampleSimple  from '../utils/buttons/button.js'
+import CardExampleExpandable from '../utils/card/card.js'
+
+
+const dashBoardStyle = {
+
+};
 
 class DashboardContainer extends React.Component {
 
@@ -20,14 +24,11 @@ class DashboardContainer extends React.Component {
   }
 
 
-
-
   render() {
    return (
-     <div >
+     <div style={dashBoardStyle}>
         <MenuExampleSimple/>
-        <PaperExampleSimple jobDescription={this.state}/>
-        <RaisedButtonExampleSimple />
+        <CardExampleExpandable />
      </div>
    );
  }
