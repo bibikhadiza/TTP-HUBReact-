@@ -11,6 +11,8 @@ const style = {
   postition: "relative",
   margin: "auto",
   width: "700px",
+  marginBottom: "80px",
+  marginTop: "-100px",
 };
 
 const CardExampleExpandable = () => (
