@@ -28,12 +28,9 @@ class App extends Component {
     if (this.props.authStatus !== C.LOGGING_IN) {
       return (
         <div>
-          <HeaderContainer location={ this.props.location } />
-
           <main>
             { this.pageContent() }
           </main>
-
           <Footer />
         </div>
       );

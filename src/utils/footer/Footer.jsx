@@ -6,10 +6,8 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        © <a href='https://github.com/raycent/firedux'
-             target='_blank'> FIREDUX</a> 2016. Made with 🍀 by
-        <a href='https://www.linkedin.com/in/raycenttan'
-           target='_blank'> Raycent Tan</a>
+        <a href="#" className="icono-codepen"></a>
+        <a href="#" >Tech Talent Pipeline HUB</a>
       </footer>
     );
   }
