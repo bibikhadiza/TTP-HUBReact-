@@ -10,7 +10,6 @@ const style = {
 const RaisedButtonExampleSimple = () => (
   <div className="button_style">
     <RaisedButton label="Apply" secondary={true} style={style} />
-    <RaisedButton label="Skip" secondary={true} style={style} />
   </div>
 );
 
