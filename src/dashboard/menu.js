@@ -12,18 +12,9 @@ const MenuExampleSimple = () => (
  <div>
    <Paper style={style}>
      <Menu>
-       <MenuItem primaryText="Maps" />
-       <MenuItem primaryText="Books" />
-       <MenuItem primaryText="Flights" />
-       <MenuItem primaryText="Apps" />
-     </Menu>
-   </Paper>
-   <Paper style={style}>
-     <Menu>
-       <MenuItem primaryText="Refresh" />
-       <MenuItem primaryText="Help &amp; feedback" />
-       <MenuItem primaryText="Settings" />
-       <MenuItem primaryText="Sign out" />
+       <MenuItem primaryText="Portfolio" />
+       <MenuItem primaryText="Applied" />
+       <MenuItem primaryText="Connect"/>
      </Menu>
    </Paper>
  </div>

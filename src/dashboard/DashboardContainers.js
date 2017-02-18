@@ -1,7 +1,8 @@
 import React from 'react'
 import data from './data'
 import MenuExampleSimple from './menu'
-
+import PaperExampleSimple from '../utils/paper/paper.js'
+import RaisedButtonExampleSimple  from '../utils/buttons/button.js'
 
 class DashboardContainer extends React.Component {
 
@@ -15,9 +16,8 @@ class DashboardContainer extends React.Component {
   }
 
  apiCall(){
-
-     fetch('http://xsurlapi.herokuapp.com').then(result=> {
-        this.setState({results:result.json()});
+   fetch('http://xsurlapi.herokuapp.com').then(result=> {
+       this.setState({results:result.json()});
       });
     return this.state.result
   }
@@ -28,8 +28,9 @@ class DashboardContainer extends React.Component {
   render() {
    return (
      <div >
-       <button onClick={this.apiCall()}>Hi!</button>
-       <p>{this.apiCall()}</p>
+        <MenuExampleSimple/>
+        <PaperExampleSimple/>
+        <RaisedButtonExampleSimple />
      </div>
    );
  }
