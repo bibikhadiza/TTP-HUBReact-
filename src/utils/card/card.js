@@ -22,7 +22,7 @@ const CardExampleExpandable = () => (
 
   <div className="card">
 
-    <LeftSideButton />
+      <LeftSideButton />
 
         <div style={style}>
           <Card>
