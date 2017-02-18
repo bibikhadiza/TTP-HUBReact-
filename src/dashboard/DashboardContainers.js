@@ -10,16 +10,13 @@ class DashboardContainer extends React.Component {
     super(props)
     this.apiCall = this.apiCall.bind(this)
     this.state = {
-      result: ""
+      result: data
     }
     this.apiCall = this.apiCall.bind(this)
   }
 
  apiCall(){
-   fetch('http://xsurlapi.herokuapp.com').then(result=> {
-       this.setState({results:result.json()});
-      });
-    return this.state.result
+
   }
 
 
@@ -29,7 +26,7 @@ class DashboardContainer extends React.Component {
    return (
      <div >
         <MenuExampleSimple/>
-        <PaperExampleSimple/>
+        <PaperExampleSimple jobDescription={this.state}/>
         <RaisedButtonExampleSimple />
      </div>
    );
