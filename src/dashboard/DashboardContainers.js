@@ -1,8 +1,8 @@
 import React from 'react'
 import data from './data'
-import MenuExampleSimple from './menu'
+import DropDownMenuSimpleExample from './menu'
 import CardExampleExpandable from '../utils/card/card.js'
-
+import HeaderContainer from '../utils/header/HeaderContainer.js'
 
 const dashBoardStyle = {
 
@@ -27,7 +27,7 @@ class DashboardContainer extends React.Component {
   render() {
    return (
      <div style={dashBoardStyle}>
-        <MenuExampleSimple/>
+        <DropDownMenuSimpleExample/>
         <CardExampleExpandable />
      </div>
    );

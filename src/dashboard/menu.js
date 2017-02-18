@@ -1,23 +1,37 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
-import Menu from 'material-ui/Menu';
+import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-const style = {
- display: 'inline-block',
- margin: '16px 32px 16px 0',
+const styles = {
+  customWidth: {
+    width: 200,
+  },
 };
 
-const MenuExampleSimple = () => (
- <div>
-   <Paper style={style}>
-     <Menu>
-       <MenuItem primaryText="Portfolio" />
-       <MenuItem primaryText="Applied" />
-       <MenuItem primaryText="Connect"/>
-     </Menu>
-   </Paper>
- </div>
-);
+export default class DropDownMenuSimpleExample extends React.Component {
 
-export default MenuExampleSimple;
+  constructor(props) {
+    super(props);
+    this.state = {value: 1};
+  }
+
+  handleChange = (event, index, value) => this.setState({value});
+
+  render() {
+    return (
+      <div>
+        <DropDownMenu
+          value={this.state.value}
+          onChange={this.handleChange}
+          style={styles.customWidth}
+          autoWidth={false}
+        >
+          <MenuItem value={1} primaryText="Portfolio" />
+          <MenuItem value={2} primaryText="Application History" />
+          <MenuItem value={3} primaryText="Resources" />
+          <MenuItem value={4} primaryText="Slack" />
+        </DropDownMenu>
+      </div>
+    );
+  }
+}
