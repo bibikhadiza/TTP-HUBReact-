@@ -9,7 +9,7 @@ const style = {
   overflow: "scroll",
 };
 
-const PaperExampleSimple = () => (
+const PaperExampleSimple = (props) => (
   <div>
     <Paper style={style} zDepth={2} />
   </div>
