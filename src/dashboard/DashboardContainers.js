@@ -4,10 +4,13 @@ import DropDownMenuSimpleExample from './menu'
 import CardExampleExpandable from '../utils/card/card.js'
 import HeaderContainer2 from '../utils/header/HeaderContainer2.js'
 import Nav from '../utils/header/HeaderContainer2.js'
+import {Modal, Button} from "react-bootstrap"
+
 
 const dashBoardStyle = {
   margin: "auto"
 };
+
 
 class DashboardContainer extends React.Component {
 
@@ -17,22 +20,24 @@ class DashboardContainer extends React.Component {
     this.state = {
       result: data
     }
-    this.apiCall = this.apiCall.bind(this)
-  }
-
- apiCall(){
-
   }
 
 
-  render() {
-   return (
-     <div style={dashBoardStyle}>
+  apiCall(){
+
+   }
+
+
+  render(){
+    return (
+      <div style={{margin: '50px'}}>
+
         <DropDownMenuSimpleExample />
         <CardExampleExpandable />
-     </div>
-   );
- }
+    </div>
+    )
+  }
 }
+
 
 export default DashboardContainer
