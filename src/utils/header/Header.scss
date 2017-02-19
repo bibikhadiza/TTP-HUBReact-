@@ -1,3 +1,22 @@
 .icon {
-  padding-top: 4px;
+  padding-top: 1px;
+}
+
+
+.header {
+  background: #080808;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  color: #080808;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  a {
+    color: #FFF;
+    &:hover {
+      color: #E8F5E9;
+      text-decoration: none;
+    }
+  };
 }
