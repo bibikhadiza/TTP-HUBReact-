@@ -2,7 +2,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import button_style from './button.css'
 import {Modal, Button} from "react-bootstrap"
-
+import ReactForm from "../modal/ReactForm.js"
 const style = {
   margin: 40,
 };
@@ -21,7 +21,7 @@ const Trigger = React.createClass({
           marginTop="-10px"
           onClick={() => this.setState({ show: true})}
         >
-          Apply
+          APPLY
         </RaisedButton>
 
         <Modal
@@ -31,14 +31,9 @@ const Trigger = React.createClass({
           aria-labelledby="contained-modal-title"
         >
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>
+            <Modal.Title id="contained-modal-title">Application</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            Elit est explicabo ipsum eaque dolorem blanditiis doloribus sed id ipsam, beatae, rem fuga id earum? Inventore et facilis obcaecati.
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={close}>Close</Button>
-          </Modal.Footer>
+            <ReactForm />
         </Modal>
       </div>
     );

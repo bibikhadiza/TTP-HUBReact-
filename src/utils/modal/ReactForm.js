@@ -1,5 +1,5 @@
 import React from 'react';
-import from "./reactform.scss"
+import "./reactform.scss"
 
 const reactFormContainer = document.querySelector('.react-form-container');
 
@@ -77,7 +77,7 @@ class ReactForm extends React.Component {
   render() {
     return(
       <form className='react-form' onSubmit={this.handleSubmit}>
-        <h1>Say Hi!</h1>
+        <h1>Introduce Yourself!</h1>
         <fieldset className='form-group'>
           <ReactFormLabel htmlFor='formName' title='Full Name:' />
 

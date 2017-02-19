@@ -25,7 +25,7 @@ export default class DropDownMenuSimpleExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <header>
 
         <DropDownMenu
           value={this.state.value}
@@ -40,7 +40,7 @@ export default class DropDownMenuSimpleExample extends React.Component {
           <MenuItem value={5} primaryText="Slack" />
           <MenuItem value={6} primaryText="Log Out" />
         </DropDownMenu>
-      </div>
+      </header>
     );
   }
 }
