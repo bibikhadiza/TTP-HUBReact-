@@ -1,11 +1,11 @@
 import React from 'react'
 import data from './data'
-import MenuExampleSimple from './menu'
+// import MenuExampleSimple from './menu'
 import CardExampleExpandable from '../utils/card/card.js'
 
 
 const dashBoardStyle = {
-
+  margin: "auto"
 };
 
 class DashboardContainer extends React.Component {
@@ -27,7 +27,7 @@ class DashboardContainer extends React.Component {
   render() {
    return (
      <div style={dashBoardStyle}>
-        <MenuExampleSimple/>
+
         <CardExampleExpandable />
      </div>
    );

@@ -2,6 +2,8 @@ import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButtonExampleSimple  from '../buttons/button.js'
+import styles from './card.css'
+import CSSModules from 'react-css-modules';
 
 const style = {
   margin: "auto",
@@ -15,7 +17,11 @@ const style = {
   marginTop: "-100px",
 };
 
+
 const CardExampleExpandable = () => (
+  <div>
+    <div className="icono-rewind"></div>
+    <div className="icono-forward"></div>
   <div style={style}>
   <Card>
     <CardHeader
@@ -45,7 +51,9 @@ const CardExampleExpandable = () => (
     </CardText>
   </Card>
   <RaisedButtonExampleSimple />
+  </div>
+
 </div>
 );
 
-export default CardExampleExpandable;
+export default CSSModules(CardExampleExpandable, styles);
