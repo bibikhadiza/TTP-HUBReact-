@@ -6,7 +6,7 @@ import HeaderContainer2 from '../utils/header/HeaderContainer2.js'
 import Nav from '../utils/header/HeaderContainer2.js'
 
 const dashBoardStyle = {
-
+  margin: "auto"
 };
 
 class DashboardContainer extends React.Component {
