@@ -20,7 +20,7 @@ class ReactForm extends React.Component {
     super();
 
     this.state = {
-      name: '',
+      question1: '',
       email: '',
       subject: '',
       message: ''
@@ -39,13 +39,12 @@ class ReactForm extends React.Component {
     e.preventDefault();
 
     let formData = {
-      formSender: this.state.name,
-      formEmail: this.state.email,
-      formSubject: this.state.subject,
-      formMessage: this.state.message
+      formquestion1: this.state.question1,
+      formquestion2: this.state.question2,
+      formquestion3: this.state.question3,
     }
 
-    if (formData.formSender.length < 1 || formData.formEmail.length < 1 || formData.formSubject.length < 1 || formData.formMessage.length < 1) {
+    if (formData.formquestion1.length < 1 || formData.formquestion2.length < 1 || formData.formquestion3.length < 1) {
       return false;
     }
 
@@ -66,44 +65,42 @@ class ReactForm extends React.Component {
     // });
 
     this.setState({
-      firstName: '',
-      lastName: '',
-      email: '',
-      subject: '',
-      message: ''
+      question1: '',
+      question2: '',
+      question3: ''
     });
   };
 
   render() {
     return(
       <form className='react-form' onSubmit={this.handleSubmit}>
-        <h1>Introduce Yourself!</h1>
+        <h1>Application</h1>
         <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formName' title='Full Name:' />
+          <ReactFormLabel htmlFor='formName' title='Tell us about yourself?' />
 
-          <input id='formName' className='form-input' name='name' type='text' ref='formName' required onChange={this.handleChange} value={this.state.name} />
+          <input id='formQuestion1' className='form-input' name='question1' type='text' ref='formName' required onChange={this.handleChange} value={this.state.question1} />
         </fieldset>
 
         <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formEmail' title='Email:' />
+          <ReactFormLabel htmlFor='formQuestion2' title='Why are you interested in this company?' />
 
-          <input id='formEmail' className='form-input' name='email' type='email' required onChange={this.handleChange} value={this.state.email} />
+          <textarea id='formQuestion2' className='form-input' name='question2' type='text' required onChange={this.handleChange} value={this.state.question2} />
         </fieldset>
 
         <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formSubject' title='Subject:'/>
+          <ReactFormLabel htmlFor='formQuestion3' title='What is your opinion on agile development?' />
 
-          <input id='formSubject' className='form-input' name='subject' type='text' required onChange={this.handleChange} value={this.state.subject} />
+          <textarea id='formQuestion3' className='form-input' name='question3' type='text' required onChange={this.handleChange} value={this.state.question3} />
         </fieldset>
 
         <fieldset className='form-group'>
-          <ReactFormLabel htmlFor='formMessage' title='Message:' />
+          <ReactFormLabel htmlFor='formQuestion4' title='Tell us a joke!' />
 
-          <textarea id='formMessage' className='form-textarea' name='message' required onChange={this.handleChange}></textarea>
+          <textarea id='formQuestion4' className='form-input' name='question4' type='text' required onChange={this.handleChange} value={this.state.question3} />
         </fieldset>
 
         <div className='form-group'>
-          <input id='formButton' className='btn' type='submit' placeholder='Send message' />
+          <input id='formButton' className='btn' type='submit' placeholder='Submit' />
         </div>
       </form>
     )

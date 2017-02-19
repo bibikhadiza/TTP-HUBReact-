@@ -31,7 +31,7 @@ const Trigger = React.createClass({
           aria-labelledby="contained-modal-title"
         >
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title">Application</Modal.Title>
+            <Modal.Title id="contained-modal-title">Introduce Yourself!</Modal.Title>
           </Modal.Header>
             <ReactForm />
         </Modal>
