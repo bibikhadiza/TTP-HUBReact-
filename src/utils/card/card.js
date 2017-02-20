@@ -26,41 +26,76 @@ const product = {
 }
 
 
-const CardExampleExpandable = () => (
-  <div style={product}>
-    <div className="icono-rewind"></div>
-    <div className="icono-forward"></div>
-  <div style={style}>
-  <Card>
-    <CardHeader
-      title="Job Title"
-      subtitle="Company"
-      actAsExpander={true} showExpandableButton={true}
-    />
-    <CardText>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-    </CardText>
+class CardExampleExpandable extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      counter: 0,
+    }
+  }
 
-    <CardText>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-    </CardText>
+  rewind(){
+    if(this.state.counter > 0){
+      this.setState({
+        counter: --this.state.counter,
+      })
+    }
+  }
 
-    <CardText expandable={true}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-    </CardText>
-  </Card>
-  <RaisedButtonExampleSimple />
-</div>
-</div>
-);
+  forward(){
+    if(this.state.counter < 2){
+      this.setState({
+        counter: ++this.state.counter,
+      })
+    }
+  }
+
+  render(){
+    return (
+      <div style={product}>
+        <div className="icono-rewind" onClick={this.rewind.bind(this)}></div>
+        <div className="icono-forward" onClick={this.forward.bind(this)}></div>
+      <div style={style}>
+      <Card>
+        <CardHeader
+          title={this.props.postings[this.state.counter].positionTitle + ", " + " " + this.props.postings[this.state.counter].level}
+          subtitle={this.props.postings[this.state.counter].companyName + "," + " " + this.props.postings[this.state.counter].location}
+          actAsExpander={true} showExpandableButton={true}
+        />
+        <CardText>
+          {this.props.postings[this.state.counter].jobDescription}
+        </CardText>
+
+        <CardText expandable={true}>
+          Responsibilities:
+          <ul>
+          {this.props.postings[this.state.counter].responsibilities.map((r, i)=> <li key={i} className='responsibilities'>{r}</li>)}
+          </ul>
+        </CardText>
+
+        <CardText>
+          Requirement:
+          <ul>
+          {this.props.postings[this.state.counter].requirements.map((r, i)=> <li key={i} className='requirement'>{r}</li>)}
+          </ul>
+        </CardText>
+
+        <CardText expandable={true} >
+        Perks:
+        <ul>
+          {this.props.postings[this.state.counter].perks.map((p, i)=> <li key={i} className='perks'>{p}</li>)}
+        </ul>
+        </CardText>
+
+        <CardText expandable={true} >
+          Application Link: {this.props.postings[this.state.counter].applicationLink}
+        </CardText>
+      </Card>
+      <RaisedButtonExampleSimple/>
+    </div>
+    </div>
+    )
+  }
+}
 
 export default CSSModules(CardExampleExpandable, styles);
