@@ -52,7 +52,7 @@ class CardExampleExpandable extends React.Component {
 
   render(){
     return (
-      <div style={product}>
+      <div style={product} className="cardBadass">
         <div className="icono-rewind" onClick={this.rewind.bind(this)}></div>
         <div className="icono-forward" onClick={this.forward.bind(this)}></div>
       <div style={style}>
