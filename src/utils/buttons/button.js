@@ -43,7 +43,7 @@ const Trigger = React.createClass({
 const RaisedButtonExampleSimple = () => (
   <div className="button_style">
     <Trigger style={style}/>
-    <RaisedButton label="Skip" secondary={true} style={style} />
+    <RaisedButton label="Skip" secondary={true} style={style}  />
   </div>
 );
 

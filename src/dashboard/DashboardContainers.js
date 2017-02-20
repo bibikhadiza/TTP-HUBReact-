@@ -33,7 +33,7 @@ class DashboardContainer extends React.Component {
       <div style={{margin: '50px'}}>
 
         <DropDownMenuSimpleExample />
-        <CardExampleExpandable />
+        <CardExampleExpandable postings={this.state.result}/>
     </div>
     )
   }
