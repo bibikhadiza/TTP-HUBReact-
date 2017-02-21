@@ -20,9 +20,8 @@ const Trigger = React.createClass({
         <RaisedButton
           marginTop="-10px"
           onClick={() => this.setState({ show: true})}
-        >
-          APPLY
-        </RaisedButton>
+          label="Apply"
+        />
 
         <Modal
           show={this.state.show}
