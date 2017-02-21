@@ -1,10 +1,13 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import Paper from 'material-ui/Paper';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButtonExampleSimple  from '../buttons/button.js'
 import styles from './card.css'
 import CSSModules from 'react-css-modules';
-import data from '../../dashboard/data'
+import data from '../../dashboard/data';
 
 // import LeftSideButton from '../sidebutton/leftSideButton.js'
 // import RightSideButton from '../sidebutton/rightSideButton.js'
@@ -23,11 +26,24 @@ const style = {
   top: "20%",
 };
 
-const product = {
-  marginTop: "10%",
-  marginBottom: "10%"
+const container = {
+  width: "85%",
+  margin: "5% auto 10%"
 }
 
+const card = {
+  width: "50%",
+  display: "inline-block",
+  height: "400"
+}
+
+const bigFont = {
+  fontSize: "1.5em"
+}
+
+const ulStyle = {
+  width: "600"
+}
 
 class HistoryContainer extends React.Component {
   constructor(props){
@@ -40,58 +56,71 @@ class HistoryContainer extends React.Component {
 
   render(){
     return (
-      <div style={product} className="cardBadass">
+      <div style={container} className="cardBadass">
+        <div>
+          <Paper style={card} >
+            <Menu>
+              <MenuItem primaryText="Requirements" style={bigFont}/>
+              <ul style={ulStyle}>
+                <strong>Job Description:</strong><br /> {this.props.postings[0].jobDescription}
+              </ul>
+              <br />
+              <ul>
+                <strong>Requirements:</strong><br/>
+                {this.props.postings[0].requirements.map(req => <li>{req}</li>)}
+              </ul>
+            </Menu>
+          </Paper>
 
-      <Card>
+          <Paper style={card}>
+            <Menu>
+              <MenuItem primaryText="Interview Prep" style={bigFont}/>
+              <ul>
+                <h4>Software Engineering</h4>
+                <li>
+                  <a href="http://www.techrepublic.com/blog/software-engineer/css-interview-questions-and-answers/" target="_blank">
+                    General software engineering interview questions
+                  </a>
+                </li>
+                <h4>HTML</h4>
+                <li>
+                  <a href="http://techpreparation.com/html-interview-questions-answers1.htm" target="_blank">
+                    HTML interview questions
+                  </a>
+                </li>
+                <h4>JavaScript</h4>
+                <li>
+                  <a href="https://www.toptal.com/javascript/interview-questions" target="_blank">
+                    JavaScript interview questions
+                  </a>
+                </li>
+                <h4>React</h4>
+                <li>
+                  <a href="https://www.toptal.com/react/interview-questions" target="_blank">
+                    React interview questions
+                  </a>
+                </li>
+                <br/>
+                <h4>Slack</h4>
+                <p><a href="#">@sarah</a> - Software Developer @ Slack</p>
+              </ul>
+            </Menu>
+            {/* <CardHeader
+              title="Interview Prep"
+              subtitle="Prepare with some practice interview questions"
+            /> */}
+          </Paper>
+        </div>
 
-      <CardHeader
-        title={this.props.postings[0].positionTitle + ", " + " " + this.props.postings[0].level}
-        subtitle={this.props.postings[0].companyName + "," + " " + this.props.postings[0].location}
-        actAsExpander={true} showExpandableButton={true}
-      />
-      <CardText >
-        {this.props.postings[0].jobDescription}
-      </CardText>
-
-      <CardText>
-        Requirement:
-        <ul>
-        {this.props.postings[0].requirements.map((r, i)=> <li key={i} className='requirement'>{r}</li>)}
-        </ul>
-      </CardText>
 
 
-      <CardHeader
-        title={this.props.postings[1].positionTitle + ", " + " " + this.props.postings[1].level}
-        subtitle={this.props.postings[1].companyName + "," + " " + this.props.postings[1].location}
-      />
-      <CardText>
-        {this.props.postings[1].jobDescription}
-      </CardText>
-
-      <CardText>
-        Requirement:
-        <ul>
-        {this.props.postings[1].requirements.map((r, i)=> <li key={i} className='requirement'>{r}</li>)}
-        </ul>
-      </CardText>
-
-      <CardHeader
-        title={this.props.postings[2].positionTitle + ", " + " " + this.props.postings[2].level}
-        subtitle={this.props.postings[2].companyName + "," + " " + this.props.postings[2].location}
-      />
-      <CardText expandable={true}>
-        {this.props.postings[2].jobDescription}
-      </CardText>
-
-      <CardText>
-        Requirement:
-        <ul>
-        {this.props.postings[2].requirements.map((r, i)=> <li key={i} className='requirement'>{r}</li>)}
-        </ul>
-      </CardText>
-
-      </Card>
+        <Card>
+          <CardHeader
+            title={this.props.postings[0].positionTitle + ", " + " " + this.props.postings[0].level}
+            subtitle={this.props.postings[0].companyName + "," + " " + this.props.postings[0].location}
+            actAsExpander={true} showExpandableButton={false}
+          />
+        </Card>
 
     </div>
     )

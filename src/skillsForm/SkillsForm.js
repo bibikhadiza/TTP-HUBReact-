@@ -68,13 +68,13 @@ class SkillsForm extends Component {
 
   handleSubmit(e) {
     // console.log(this.state)
-    e.preventDefault();
+    // e.preventDefault();
     // submit and redirect to dashboard
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form action='/dashboard' method='get'>
         <h3>Select your skills</h3>
         <Divider />
         { this.renderSkillsCheckboxes() }
