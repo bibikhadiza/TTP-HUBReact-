@@ -57,6 +57,7 @@ class CardExampleExpandable extends React.Component {
         <div className="icono-forward" onClick={this.forward.bind(this)}></div>
       <div style={style}>
       <Card>
+
         <CardHeader
           title={this.props.postings[this.state.counter].positionTitle + ", " + " " + this.props.postings[this.state.counter].level}
           subtitle={this.props.postings[this.state.counter].companyName + "," + " " + this.props.postings[this.state.counter].location}
