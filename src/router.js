@@ -15,3 +15,6 @@ export const routes = (
 
   </Router>
 );
+
+// if router for history =>
+// <HistoryContainer postings={this.state.result}/>

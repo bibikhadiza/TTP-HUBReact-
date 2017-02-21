@@ -49,7 +49,7 @@ class HistoryContainer extends React.Component {
         subtitle={this.props.postings[0].companyName + "," + " " + this.props.postings[0].location}
         actAsExpander={true} showExpandableButton={true}
       />
-      <CardText>
+      <CardText >
         {this.props.postings[0].jobDescription}
       </CardText>
 
@@ -80,7 +80,7 @@ class HistoryContainer extends React.Component {
         title={this.props.postings[2].positionTitle + ", " + " " + this.props.postings[2].level}
         subtitle={this.props.postings[2].companyName + "," + " " + this.props.postings[2].location}
       />
-      <CardText>
+      <CardText expandable={true}>
         {this.props.postings[2].jobDescription}
       </CardText>
 
