@@ -112,7 +112,7 @@ class ReactForm extends React.Component {
       <fieldset className='form-group'>
         <ReactFormLabel htmlFor='formQuestion4' title='Tell us a joke!' />
 
-        <textarea id='formQuestion4' className='form-input' name='question4' type='text' required onChange={this.handleChange} value={this.state.question3} />
+        <textarea id='formQuestion4' className='form-input' name='question4' type='text' required onChange={this.handleChange} value={this.state.question4} />
       </fieldset>
 
       <div className='form-group'>
