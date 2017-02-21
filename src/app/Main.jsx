@@ -3,6 +3,7 @@ import LoginFormContainer from '../auth/LoginFormContainer';
 import C from '../auth/constants';
 import DashboardContainer from '../dashboard/DashboardContainers'
 
+
 class Main extends Component {
 
   static propTypes() {
@@ -14,7 +15,6 @@ class Main extends Component {
   render() {
     if (this.props.authStatus === C.LOGGED_IN) {
       return <DashboardContainer />
-
     } else {
       return <LoginFormContainer />
 

@@ -11,7 +11,8 @@ class App extends Component {
     return {
       authStatus: PropTypes.string.isRequired,
       uid: PropTypes.string,
-      userName: PropTypes.string
+      userName: PropTypes.string,
+      showJob: true
     };
   }
 
@@ -44,7 +45,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     ...ownProps,
     authStatus: state.getIn(['auth', 'authStatus']),
-    dataLoading: state.get('dataLoading')
+    dataLoading: state.get('dataLoading'),
+    showJob: state.get('showJob')
   };
 };
 

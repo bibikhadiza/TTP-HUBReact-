@@ -4,7 +4,7 @@ import Main from './Main';
 const mapStateToProps = state => {
   return {
     authStatus: state.getIn(['auth', 'authStatus'])
-    
+
   };
 };
 
