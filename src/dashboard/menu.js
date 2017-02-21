@@ -45,6 +45,7 @@ export default class DropDownMenuSimpleExample extends React.Component {
     this.setState({ showJob: false })
   }
 
+
   render() {
     return (
       <header>
@@ -57,6 +58,7 @@ export default class DropDownMenuSimpleExample extends React.Component {
         >
           <MenuItem value={1} primaryText="Fidel Severino" />
           <MenuItem value={2} primaryText="Portfolio" href="https://ttp-profile.herokuapp.com/FidelSeverino"/>
+          <MenuItem value={1} primaryText="Resources" />
           {this.img()}<MenuItem value={3} clickHandler={this.props.removeJob} primaryText="Application History"/>
           <MenuItem value={5} primaryText="Slack" href="https://ttp-hub.slack.com/"/>
           <MenuItem value={6} primaryText="Log Out" />
