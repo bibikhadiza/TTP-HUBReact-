@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 import App from './app/App';
 import { history } from './store.js';
 import MainContainer from './app/MainContainer';
+import SkillsForm from './skillsForm/SkillsForm';
 
 export const routes = (
   <Router
