@@ -14,11 +14,7 @@ injectTapEventPlugin();
 ReactDOM.render(
   <MuiThemeProvider>
     <Provider store={store}>
-      <Router
-        history={ history }
-        onUpdate={ () => window.scrollTo(0, 0) }
-        routes={ routes }
-      />
+      { routes }
     </Provider>
   </MuiThemeProvider>,
   document.getElementById('root')
