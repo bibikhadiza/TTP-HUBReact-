@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Checkbox from 'material-ui/Checkbox';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
 import {GridList} from 'material-ui/GridList';
 import skills from './skills'
@@ -19,6 +20,10 @@ const styles = {
   checkbox: {
     margin: 15,
   },
+  uploadBtn: {
+    display: "block",
+    margin: "5px auto",
+  }
 };
 
 class SkillsForm extends Component {
@@ -79,9 +84,17 @@ class SkillsForm extends Component {
         <Divider />
         { this.renderSkillsCheckboxes() }
         <RaisedButton
+          style={styles.uploadBtn}
+          type="file"
+          className="col end-xs"
+          label="Upload Resume"
+          primary
+        ><input type="file"/></RaisedButton>
+        {/* <input type="file" label="Upload Resume"/> */}
+        <RaisedButton
           type="Submit"
           className="col end-xs"
-          label="Continue"
+          label="Submit"
           secondary
         />
       </form>
